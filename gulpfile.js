@@ -18,23 +18,24 @@ gulp.task("sass", gulp.series(function () {
 }));
 
 
-// gulp.task("browserSync", gulp.series(function () {
-//     /* other code */
-//     browserSync.init({
-//         notify: false,
-//         port: 8000,
-//         proxy: 'http://127.0.0.1:8000/'
-//     });
-// }));
+gulp.task("browserSync", gulp.series(function () {
+    /* other code */
+    browserSync.init({
+        notify: false,
+        port: 8000,
+        proxy: 'http://127.0.0.1:8000/'
+    });
+    // gulp.watch("web/static/sass/**/*.scss", ["sass"]);
+    // gulp.watch("web/static/js/*.js");
+    // gulp.watch("web/**/templates/**/*.html");
+}));
 
 
-// gulp.watch("web/static/sass/**/*.scss", ["sass"]);
-// gulp.watch("web/static/js/*.js", ["js"]);
-// gulp.watch("web/**/templates/**/*.html", ["js"]);
+
 
 // gulp.task('default', gulp.series('sass', 'browserSync'));
 
 
 
-gulp.task('build', gulp.parallel('sass'));
+gulp.task('build', gulp.parallel('sass', 'browserSync'));
 gulp.task('default', gulp.parallel('build'));
