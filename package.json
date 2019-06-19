@@ -1,0 +1,27 @@
+{
+  "name": "holidaydream",
+  "version": "1.0.0",
+  "description": "A demo wagtail project to practice django, wagtail and frontend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinous22/HolidayDream.git"
+  },
+  "author": "Mannar Hielal",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/vinous22/HolidayDream/issues"
+  },
+  "homepage": "https://github.com/vinous22/HolidayDream#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "async-once": "^1.0.1"
+  }
+}
