@@ -1,8 +1,20 @@
-// const { series } = require('gulp');
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
 
+
+const
+    gulp = require('gulp'),
+    del = require('del'),
+    sass = require('gulp-sass');
+browserSync = require('browser-sync').create();
+dir = {
+    src: 'src/',
+    build: 'build/'
+};
+
+gulp.task('clean', () => {
+
+    del([dir.build]);
+    done();
+});
 
 gulp.task("sass", gulp.series(function () {
     /* other code */
@@ -25,17 +37,14 @@ gulp.task("browserSync", gulp.series(function () {
         port: 8000,
         proxy: 'http://127.0.0.1:8000/'
     });
-    // gulp.watch("web/static/sass/**/*.scss", ["sass"]);
-    // gulp.watch("web/static/js/*.js");
-    // gulp.watch("web/**/templates/**/*.html");
+
 }));
 
 
+gulp.task('default', gulp.series('sass', 'browserSync', (done) => {
 
-
-// gulp.task('default', gulp.series('sass', 'browserSync'));
-
-
-
-gulp.task('build', gulp.parallel('sass', 'browserSync'));
-gulp.task('default', gulp.parallel('build'));
+    // CSS changes
+    gulp.watch('holidaydream_project/web/static/web/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('holidaydream_project/web/template/**/*.html');
+    done();
+}));
