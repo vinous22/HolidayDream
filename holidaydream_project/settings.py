@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'web.apps.WebConfig', #new
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,6 +53,8 @@ INSTALLED_APPS = [
     'wagtail.core',
     'modelcluster',
     'taggit',
+
+    'holidaydream_project.web',
 ]
 
 MIDDLEWARE = [
