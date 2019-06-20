@@ -4,5 +4,7 @@
 footer {
   width: 100%;
   position: relative;
-  background-color: burlywood;
+  background-color: $body-light;
+  border-top: 2px solid $glowing-red;
+  padding: 20px 0;
 }

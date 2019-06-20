@@ -1,6 +1,24 @@
-{% load wagtailcore_tags %}
-<header class="header">
+{% load wagtailcore_tags static %}
+<header class="header hero-image">
     <div class="content-wrapper">
-        this is a header
+
+        <div class="header__top justify-content--space-between">
+            <div class="header__brand">
+                <a class="text-uppercase h4" href="#">dreamshare</a>
+
+            </div>
+            <div class="header__user">
+                <a class="btn btn--blank" href="#home">Log in</a>
+                <button class="btn btn--default">Sign up</button>
+            </div>
+        </div>
+
+        <div class="header__call2action">
+            <h1 class="text-uppercase">share your <br>holiday dream</h1>
+            <p class="text--lead">And find the perfect partner to fulfill it</p>
+            <button class="btn btn--primary btn--call2action h6">Find your holiday Partner</button>
+
+        </div>
+
     </div>
 </header>

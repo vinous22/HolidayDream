@@ -1,3 +1,15 @@
 /**
  * Buttons
  */
+.btn--primary {
+  background-color: $glowing-red;
+  border-radius: 25px;
+  padding: 8px 20px;
+}
+.btn--default {
+  background-color: transparent;
+  border: 2px solid $body-light;
+  border-radius: 25px;
+  color: $body-light;
+  padding: 8px 20px;
+}

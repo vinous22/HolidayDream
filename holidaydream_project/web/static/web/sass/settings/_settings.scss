@@ -18,6 +18,7 @@ $text-dark: #666666; //default
 $text-light: #999999;
 $text-lighter: #cccccc;
 $text-lightest: #e3e3e3;
+$text-lead: #f7f3f2;
 
 /**
  * Typography
@@ -26,27 +27,24 @@ $text-lightest: #e3e3e3;
 $font-family-headers: "Montserrat", sans-serif;
 $font-family-default: "Roboto", sans-serif;
 
-$font-size-base: 18px;
-$font-size-36: 2rem; // 36px
-$font-size-30: 1.6666666667rem; // 30px
-$font-size-27: 1.5rem; // 27px
-$font-size-24: 1.3333333333rem; // 24px
-$font-size-20: 1.1111111111rem; // 20px
-$font-size-19: 1.0555555556rem; // 19px
-$font-size-18: 1rem; // 18px
-$font-size-17: 0.9444444444rem; // 17px
-$font-size-16: 0.8888888889rem; // 16px
-$font-size-15: 0.8333333333rem; // 15px
-$font-size-14: 0.7777777778rem; // 14px
-$font-size-12: 0.6666666667rem; // 12px
+$font-size-base: 14px;
+$font-size-10: 0.7142857143rem;
+$font-size-14: 1rem;
+$font-size-18: 1.2857142857rem;
+$font-size-16: 1.1428571429rem;
+$font-size-20: 1.4285714286rem;
+$font-size-22: 1.5714285714rem;
+$font-size-24: 1.7142857143rem;
+$font-size-30: 2.1428571429rem;
+$font-size-52: 3.7142857143rem;
 
+$weight-light: 300;
 $weight-regular: 400;
-$weight-semi-bold: 600;
 $weight-bold: 700;
 
 $line-height-default: 1.5;
 
-/**
+/**    
  * positioning
  */
 .justify-content--center {
@@ -80,7 +78,7 @@ $line-height-default: 1.5;
 
 $ratio: 1.61803398875;
 
-$spacing-unit-default: 20px;
+$spacing-unit-default: 5px;
 $spacing-unit-tiny: floor($spacing-unit-default / ($ratio * 2));
 $spacing-unit-small: floor($spacing-unit-default / $ratio);
 $spacing-unit-large: floor($spacing-unit-default * $ratio);
