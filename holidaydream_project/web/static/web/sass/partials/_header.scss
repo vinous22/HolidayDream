@@ -1,3 +1,16 @@
 /**
  * Header
  */
+.header {
+  // mobile
+  // z-index: 1;
+  height: 540px;
+  width: 100%;
+  // position: fixed;
+  background-color: brown;
+
+  // //tablet from 768
+  @media only screen and (min-width: $screen-sm-min) {
+    height: 700px;
+  }
+}
