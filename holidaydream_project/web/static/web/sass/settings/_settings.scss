@@ -1,0 +1,245 @@
+/*----------------------------------------*\
+  GLOBAL SETTINGS
+\*----------------------------------------*/
+
+// Use this setting to prefix all the components classes
+$namespace: "";
+
+// Flip all left/right properties for right-to-left languages
+$rtl: false;
+
+/**
+ * Colors
+ */
+$body-warm-gray-100: #f5f5f4;
+$text-default: #353535;
+$header-blue-750: #0071a7;
+$menu-blue-1000: #002b3f;
+$warm-gray-1000: #2a2a26;
+$link-default-blue-750: #0071a7;
+$link-hover-blue-1000: #002b3f;
+$highlight-yellow-600: #ffc914;
+$footer-warm-gray-900: #46453e;
+$footer-warm-gray-1000: #2a2a26;
+$footer-light-white: #ffffff;
+$p-grau-warm-gray-800: #616157;
+$alt-color-light: #f5f5f4;
+$warning: red;
+
+/**
+ * Typography
+ */
+
+$font-family-default: "Fira Sans", sans-serif;
+$font-size-base: 18px;
+$font-size-36: 2rem; // 36px
+$font-size-30: 1.6666666667rem; // 30px
+$font-size-27: 1.5rem; // 27px
+$font-size-24: 1.3333333333rem; // 24px
+$font-size-20: 1.1111111111rem; // 20px
+$font-size-19: 1.0555555556rem; // 19px
+$font-size-18: 1rem; // 18px
+$font-size-17: 0.9444444444rem; // 17px
+$font-size-16: 0.8888888889rem; // 16px
+$font-size-15: 0.8333333333rem; // 15px
+$font-size-14: 0.7777777778rem; // 14px
+$font-size-12: 0.6666666667rem; // 12px
+
+$weight-regular: 400;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+$line-height-default: 1.5;
+
+/**
+ * positioning
+ */
+.justify-content--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justify-content--space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.justify-content--space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.justify-content--end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.justify-content--start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/**
+ * Spacings
+ */
+
+$ratio: 1.61803398875;
+
+$spacing-unit-default: 20px;
+$spacing-unit-tiny: floor($spacing-unit-default / ($ratio * 2));
+$spacing-unit-small: floor($spacing-unit-default / $ratio);
+$spacing-unit-large: floor($spacing-unit-default * $ratio);
+$spacing-unit-huge: floor($spacing-unit-default * ($ratio * 2));
+
+$spacings: (
+  "tight" 0,
+  "tiny" $spacing-unit-tiny,
+  "small" $spacing-unit-small,
+  "large" $spacing-unit-large,
+  "huge" $spacing-unit-huge
+);
+
+/**
+ * Responsiveness
+ */
+
+// Use EM media-queries for better browser consistency
+// See http://zellwk.com/blog/media-query-units
+$screen-xs-min: 320px / 16px * 1em;
+$screen-xs-max: 640px / 16px * 1em;
+$screen-sm-min: 641px / 16px * 1em;
+$screen-sm-max: 768px / 16px * 1em;
+$screen-md-min: 769px / 16px * 1em;
+$screen-md-max: 1024px / 16px * 1em;
+$screen-lg-min: 1025px / 16px * 1em;
+
+$breakpoints-default: (
+  "sm" "(min-width: #{$screen-sm-min})",
+  "md" "(min-width: #{$screen-md-min})",
+  "lg" "(min-width: #{$screen-lg-min})"
+);
+$breakpoints-desc: (
+  "xs" "(max-width: #{$screen-xs-max})",
+  "sm" "(max-width: #{$screen-sm-max})",
+  "md" "(max-width: #{$screen-md-max})"
+);
+
+/**
+ * Miscellaneous
+ */
+
+$border-radius-default: 4px;
+$border-radius-small: 2px;
+$border-radius-large: 6px;
+$border-radius-xlarge: 12px;
+
+/*----------------------------------------*\
+  COMPONENTS
+\*----------------------------------------*/
+
+/**
+ * Buttons
+ */
+
+$btn-padding: $spacing-unit-small/$ratio $spacing-unit-small;
+$btn-color: inherit;
+$btn-font-size: inherit;
+$btn-font-family: inherit;
+$btn-border: 1px solid transparent;
+$btn-bkg: transparent;
+$btn-border-radius: $border-radius-default;
+
+$btn-small-padding: $spacing-unit-tiny/$ratio $spacing-unit-tiny;
+$btn-small-font-size: $font-size-small;
+$btn-small-border: $btn-border;
+$btn-small-border-radius: $border-radius-small;
+
+$btn-large-padding: $spacing-unit-default/$ratio $spacing-unit-default;
+$btn-large-font-size: $font-size-large;
+$btn-large-border: $btn-border;
+$btn-large-border-radius: $border-radius-large;
+
+$btn-default-color: $text-color;
+$btn-default-bkg-color: $alt-color-lighter;
+$btn-default-hover-bkg-color: lighten($btn-default-bkg-color, 3%);
+$btn-default-active-bkg-color: darken($btn-default-bkg-color, 5%);
+
+$btn-primary-color: white;
+$btn-primary-bkg-color: $brand-color;
+$btn-primary-hover-bkg-color: lighten($btn-primary-bkg-color, 8%);
+$btn-primary-active-bkg-color: darken($btn-primary-bkg-color, 5%);
+
+/**
+ * Forms
+ */
+
+$field-padding: $spacing-unit-small/$ratio $spacing-unit-small;
+
+$field-color: inherit;
+$field-font-size: inherit;
+$field-font-family: inherit;
+$field-line-height: $line-height-default;
+
+$field-bkg-color: white;
+$field-border: 1px solid $alt-color-light;
+$field-focus-border-color: $alt-color-darker;
+$field-border-radius: $border-radius-default;
+
+$field-disabled-bkg-color: $alt-color-lighter;
+$field-disabled-color: $alt-color;
+
+$field-small-padding: $spacing-unit-tiny/$ratio $spacing-unit-tiny;
+$field-small-font-size: $font-size-small;
+$field-small-border: $field-border;
+$field-small-border-radius: $border-radius-small;
+
+$field-large-padding: $spacing-unit-default/$ratio $spacing-unit-default;
+$field-large-font-size: $font-size-large;
+$field-large-border: $field-border;
+$field-large-border-radius: $border-radius-large;
+
+$field-help-color: $alt-color-light;
+
+$form-group-spacing: $spacing-unit-small;
+
+/**
+ * Lists
+ */
+
+$list-separator-style: 1px solid rgba(0, 0, 0, 0.15);
+
+/**
+ * Box
+ */
+
+$box-default-color: inherit;
+$box-default-bkg-color: $alt-color-lighter;
+
+$box-primary-color: white;
+$box-primary-bkg-color: $brand-color;
+
+/**
+ * Widths
+ */
+
+$widths-columns: 6, 5, 4, 3, 2, 1;
+$widths-breakpoints: $breakpoints-default;
+
+/**
+ * Media responsive
+ */
+
+$media-collapse: $screen-sm-max;
+
+/**
+ * Container
+ */
+
+$container-gutter-width: $spacing-unit-small;
+$container-max-width: 1200px;
+
+/**
+ * Table responsive
+ */
+
+$table-responsive-collapse: $screen-sm-max;

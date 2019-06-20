@@ -19,7 +19,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "kanbasu": "^2.5.0"
   },
   "dependencies": {
     "async-once": "^1.0.1",
