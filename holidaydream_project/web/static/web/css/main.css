@@ -3252,7 +3252,7 @@ h5,
 h6,
 .h6 {
   font-size: 1rem;
-  color: white; }
+  color: #444444; }
 
 /**
  * Text categories:
@@ -3277,8 +3277,9 @@ h6,
 .text--small {
   font-size: 0.71429rem;
   font-weight: 400;
-  color: #f7f3f2;
-  font-family: "Montserrat", sans-serif; }
+  color: #cccccc;
+  font-family: "Montserrat", sans-serif;
+  line-height: 12px; }
 
 /**
  * Buttons
@@ -3303,10 +3304,37 @@ h6,
  */
 footer {
   width: 100%;
-  position: relative;
   background-color: white;
   border-top: 2px solid #ff4e50;
   padding: 20px 0; }
+
+.footer__col1 {
+  text-align: center; }
+  @media only screen and (min-width: 48.0625em) {
+    .footer__col1 {
+      text-align: left; } }
+
+.footer__col4 {
+  text-align: center; }
+  @media only screen and (min-width: 48.0625em) {
+    .footer__col4 {
+      text-align: right; } }
+
+.footer-logo {
+  background-image: url("../images/areto.svg");
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  @media only screen and (min-width: 48.0625em) {
+    .footer-logo {
+      background-position: right; } }
+
+.list--01.justify-content--center, .list--02.justify-content--center {
+  flex-direction: row; }
+  @media only screen and (min-width: 48.0625em) {
+    .list--01.justify-content--center, .list--02.justify-content--center {
+      flex-direction: column; } }
 
 /**
  * Forms
@@ -3325,6 +3353,9 @@ footer {
   @media only screen and (min-width: 48.0625em) {
     .header {
       height: 700px; } }
+  .header h6,
+  .header .h6 {
+    color: white; }
 
 .header .content-wrapper {
   padding: 20px 20px; }
@@ -3376,6 +3407,19 @@ footer {
       margin-top: 40px; } }
 
 /**
+ *  Links
+ */
+a {
+  text-decoration: none;
+  color: white; }
+
+.footer a {
+  color: #999999; }
+
+/**
+ *  Lists
+ */
+/**
  * Layout
  */
 .main {
@@ -3386,14 +3430,3 @@ footer {
   @media only screen and (min-width: 64.0625em) {
     .content-wrapper {
       max-width: 940px; } }
-
-/**
- *  Links
- */
-a {
-  text-decoration: none;
-  color: white; }
-
-/**
- *  Lists
- */

@@ -79,7 +79,7 @@ h5,
 h6,
 .h6 {
   font-size: $font-size-14;
-  color: $body-light;
+  color: $text-darker;
 }
 
 /**
@@ -108,6 +108,7 @@ h6,
 .text--small {
   font-size: $font-size-10;
   font-weight: $weight-regular;
-  color: $text-lead;
+  color: $text-lighter;
   font-family: $font-family-headers;
+  line-height: 12px;
 }

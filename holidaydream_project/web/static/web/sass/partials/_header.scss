@@ -14,6 +14,10 @@
   @media only screen and (min-width: $screen-md-min) {
     height: 700px;
   }
+  h6,
+  .h6 {
+    color: $body-light;
+  }
 }
 .header .content-wrapper {
   padding: 20px 20px;
