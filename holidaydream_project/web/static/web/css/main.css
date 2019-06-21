@@ -3259,10 +3259,10 @@ h6,
  */
 .text--default {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Roboto", sans-serif;
   color: #e3e3e3;
-  line-height: 14px; }
+  line-height: 16px; }
 
 .text--lead {
   font-size: 1.28571rem;
@@ -3277,9 +3277,10 @@ h6,
 .text--small {
   font-size: 0.71429rem;
   font-weight: 400;
-  color: #cccccc;
+  color: white;
   font-family: "Montserrat", sans-serif;
-  line-height: 12px; }
+  line-height: 12px;
+  letter-spacing: 4px; }
 
 /**
  * Buttons
@@ -3296,9 +3297,76 @@ h6,
   color: white;
   padding: 8px 20px; }
 
+.btn--small {
+  padding: 4px 13px; }
+
 /**
  * Main
  */
+.main h1 {
+  color: #444444; }
+
+.story__item {
+  position: relative; }
+
+.story--image01 {
+  background-image: url("../images/step01-tablet.svg");
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .story--image01 {
+      background-image: url("../images/step01-tablet.svg");
+      height: 400;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+.story__item--item02 {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media only screen and (min-width: 48.0625em) {
+    .story__item--item02 {
+      padding-top: 0;
+      padding-bottom: 0; } }
+
+.story--image02 {
+  background-image: url("../images/step02-tablet.svg");
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .story--image02 {
+      background-image: url("../images/step02-tablet.svg");
+      height: 400;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+.story--image03 {
+  background-image: url("../images/step03-tablet.svg");
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .story--image03 {
+      background-image: url("../images/step03-tablet.svg");
+      height: 400;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+.textblock {
+  position: absolute;
+  bottom: 28px;
+  padding: 0 20px; }
+
 /**
  * Footer
  */
@@ -3426,7 +3494,8 @@ a {
   width: 100%; }
 
 .content-wrapper {
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 10px; }
   @media only screen and (min-width: 64.0625em) {
     .content-wrapper {
       max-width: 940px; } }

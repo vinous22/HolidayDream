@@ -1,3 +1,72 @@
 /**
  * Main
  */
+
+.main h1 {
+  color: $text-darker;
+}
+.story__item {
+  position: relative;
+}
+
+.story--image01 {
+  background-image: url("../images/step01-tablet.svg");
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  @media only screen and (min-width: $screen-md-min) {
+    background-image: url("../images/step01-tablet.svg");
+    height: 400;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.story__item--item02 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @media only screen and (min-width: $screen-md-min) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.story--image02 {
+  background-image: url("../images/step02-tablet.svg");
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  @media only screen and (min-width: $screen-md-min) {
+    background-image: url("../images/step02-tablet.svg");
+    height: 400;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.story--image03 {
+  background-image: url("../images/step03-tablet.svg");
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  @media only screen and (min-width: $screen-md-min) {
+    background-image: url("../images/step03-tablet.svg");
+    height: 400;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.textblock {
+  position: absolute;
+  bottom: 28px;
+  padding: 0 20px;
+}

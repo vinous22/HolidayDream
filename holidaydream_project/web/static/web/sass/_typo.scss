@@ -87,10 +87,10 @@ h6,
  */
 .text--default {
   font-size: $font-size-14;
-  font-weight: $weight-regular;
+  font-weight: $weight-light;
   font-family: $font-family-default;
   color: $text-lightest;
-  line-height: 14px;
+  line-height: 16px; // originally 14, but 14 is too narrow
 }
 
 .text--lead {
@@ -108,7 +108,8 @@ h6,
 .text--small {
   font-size: $font-size-10;
   font-weight: $weight-regular;
-  color: $text-lighter;
+  color: $body-light;
   font-family: $font-family-headers;
   line-height: 12px;
+  letter-spacing: 4px;
 }
