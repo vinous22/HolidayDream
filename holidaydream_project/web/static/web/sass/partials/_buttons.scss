@@ -12,8 +12,23 @@
   border-radius: 25px;
   color: $body-light;
   padding: 8px 20px;
+  &:hover {
+    color: $text-darker;
+  }
 }
 
-.btn--small{
+.btn--special {
+  // background-color: $glowing-red;
+  border-radius: 25px;
+  border: 2px solid $glowing-red;
+  padding: 8px 20px;
+  color: $glowing-red;
+  &:hover {
+    background-color: $glowing-red;
+    color: $body-light;
+  }
+}
+
+.btn--small {
   padding: 4px 13px;
 }
