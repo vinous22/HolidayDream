@@ -2963,11 +2963,6 @@ template {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4; }
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -3312,12 +3307,6 @@ h6,
   padding: 4px 13px; }
 
 /**
- * Main
- */
-.main h1 {
-  color: #444444; }
-
-/**
  * Featured 01
  */
 .story__item {
@@ -3547,9 +3536,6 @@ a {
   color: #999999; }
 
 /**
- *  Lists
- */
-/**
  * Layout
  */
 .main {
@@ -3561,3 +3547,50 @@ a {
   @media only screen and (min-width: 64.0625em) {
     .content-wrapper {
       max-width: 940px; } }
+
+/**
+ * Featured 01
+ */
+.activities__item {
+  position: relative; }
+  .activities__item .activities__title {
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 21%; }
+
+.activities--image01 {
+  background-image: url("../images/activity01-sport.svg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .activities--image01 {
+      background-image: url("../images/activity01-sport.svg");
+      height: 310px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+  @media only screen and (min-width: 64.0625em) {
+    .activities--image01 {
+      background-image: url("../images/activity01-sport.svg");
+      height: 310px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+.story__item--item02 {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media only screen and (min-width: 48.0625em) {
+    .story__item--item02 {
+      padding-top: 0;
+      padding-bottom: 0; } }
+
+/**
+ * Hom
+ */
+.main h1 {
+  color: #444444; }

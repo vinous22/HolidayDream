@@ -1,0 +1,55 @@
+/**
+ * Featured 02
+ */
+.team.grid {
+  margin-top: 35px;
+  .text--default {
+    color: $text-dark;
+  }
+}
+.featured02 {
+  margin-top: 95px;
+}
+.team__item {
+  position: relative;
+}
+
+.team__item {
+  width: 220px;
+  height: 205px;
+}
+
+.team--image01 {
+  background-image: url("../images/member01.svg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team--image02 {
+  background-image: url("../images/member02.svg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team--image03 {
+  background-image: url("../images/member03.svg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.team--image04 {
+  background-image: url("../images/member04.svg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.team__call2action {
+  margin-top: 36px;
+}
