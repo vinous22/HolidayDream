@@ -3437,6 +3437,13 @@ footer {
   border-top: 2px solid #ff4e50;
   padding: 20px 0; }
 
+.footer--title {
+  text-align: center; }
+  @media only screen and (min-width: 48.0625em) {
+    .footer--title {
+      text-align: left;
+      padding-left: 16px; } }
+
 .footer__col1 {
   text-align: center; }
   @media only screen and (min-width: 48.0625em) {
@@ -3459,11 +3466,14 @@ footer {
     .footer-logo {
       background-position: right; } }
 
-.list--01.justify-content--center, .list--02.justify-content--center {
+.list--01.justify-content--center,
+.list--02.justify-content--center {
   flex-direction: row; }
   @media only screen and (min-width: 48.0625em) {
-    .list--01.justify-content--center, .list--02.justify-content--center {
-      flex-direction: column; } }
+    .list--01.justify-content--center,
+    .list--02.justify-content--center {
+      flex-direction: column;
+      align-items: flex-start; } }
 
 /**
  * Forms

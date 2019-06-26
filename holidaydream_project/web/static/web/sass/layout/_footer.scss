@@ -8,6 +8,13 @@ footer {
   border-top: 2px solid $glowing-red;
   padding: 20px 0;
 }
+.footer--title {
+  text-align: center;
+  @media only screen and (min-width: $screen-md-min) {
+    text-align: left;
+    padding-left: 16px;
+  }
+}
 
 .footer__col1 {
   text-align: center;
@@ -35,9 +42,11 @@ footer {
   }
 }
 
-.list--01.justify-content--center ,.list--02.justify-content--center {
+.list--01.justify-content--center,
+.list--02.justify-content--center {
   flex-direction: row;
   @media only screen and (min-width: $screen-md-min) {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
