@@ -3327,7 +3327,7 @@ h6,
     padding: 0 20px; }
 
 .story--image01 {
-  background-image: url("../images/step01-tablet.svg");
+  background-image: url("../images/step01-tablet.jpg");
   height: 240px;
   background-position: center;
   background-repeat: no-repeat;
@@ -3335,7 +3335,7 @@ h6,
   border-radius: 5px; }
   @media only screen and (min-width: 48.0625em) {
     .story--image01 {
-      background-image: url("../images/step01-tablet.svg");
+      background-image: url("../images/step01-tablet.jpg");
       height: 400px;
       background-position: center;
       background-repeat: no-repeat;
@@ -3350,7 +3350,7 @@ h6,
       padding-bottom: 0; } }
 
 .story--image02 {
-  background-image: url("../images/step02-tablet.svg");
+  background-image: url("../images/step02-tablet.jpg");
   height: 240px;
   background-position: center;
   background-repeat: no-repeat;
@@ -3358,14 +3358,14 @@ h6,
   border-radius: 5px; }
   @media only screen and (min-width: 48.0625em) {
     .story--image02 {
-      background-image: url("../images/step02-tablet.svg");
+      background-image: url("../images/step02-tablet.jpg");
       height: 400px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; } }
 
 .story--image03 {
-  background-image: url("../images/step03-tablet.svg");
+  background-image: url("../images/step03-tablet.jpg");
   height: 240px;
   background-position: center;
   background-repeat: no-repeat;
@@ -3373,7 +3373,7 @@ h6,
   border-radius: 5px; }
   @media only screen and (min-width: 48.0625em) {
     .story--image03 {
-      background-image: url("../images/step03-tablet.svg");
+      background-image: url("../images/step03-tablet.jpg");
       height: 400px;
       background-position: center;
       background-repeat: no-repeat;
@@ -3398,28 +3398,28 @@ h6,
   height: 205px; }
 
 .team--image01 {
-  background-image: url("../images/member01.svg");
+  background-image: url("../images/member01.jpg");
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
 
 .team--image02 {
-  background-image: url("../images/member02.svg");
+  background-image: url("../images/member02.jpg");
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
 
 .team--image03 {
-  background-image: url("../images/member03.svg");
+  background-image: url("../images/member03.jpg");
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
 
 .team--image04 {
-  background-image: url("../images/member04.svg");
+  background-image: url("../images/member04.jpg");
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
@@ -3493,7 +3493,7 @@ footer {
       padding: 20px 50px; } }
 
 .hero-image {
-  background-image: url("../images/header-image.svg");
+  background-image: url("../images/header-image.jpg");
   height: 540px;
   background-position: center;
   background-repeat: no-repeat;
