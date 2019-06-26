@@ -3478,6 +3478,52 @@ footer {
 /**
  * Forms
  */
+.newsletter {
+  margin: 40px 0; }
+  @media only screen and (min-width: 48.0625em) {
+    .newsletter {
+      margin: 100px 0; } }
+
+.newsletter--title {
+  margin-top: 0;
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 48.0625em) {
+    .newsletter--title {
+      margin-bottom: 45px; } }
+
+form .text--lead {
+  color: #666666;
+  margin-bottom: 18px; }
+  @media only screen and (min-width: 48.0625em) {
+    form .text--lead {
+      margin-bottom: 25px; } }
+
+form .btn--primary {
+  margin: 0;
+  color: white;
+  width: 100%;
+  height: 40px; }
+  @media only screen and (min-width: 48.0625em) {
+    form .btn--primary {
+      width: 175px; } }
+
+form input[type="text"] {
+  width: 100%;
+  border-color: #d4d4d4;
+  margin-bottom: 10px;
+  height: 40px; }
+  @media only screen and (min-width: 48.0625em) {
+    form input[type="text"] {
+      width: 300px; } }
+
+form ::placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  line-height: 16px;
+  padding-left: 5px; }
+
 /**
  * Header
  */
