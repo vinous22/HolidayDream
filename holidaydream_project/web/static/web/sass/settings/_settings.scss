@@ -72,9 +72,12 @@ $line-height-default: 1.5;
   justify-content: flex-start;
   align-items: center;
 }
+
 /**
  * Spacings
  */
+$grid-gutter: 20px;
+$grid-gutter-small: 10px;
 
 $ratio: 1.61803398875;
 
@@ -92,6 +95,12 @@ $spacings: (
   "huge" $spacing-unit-huge
 );
 
+.mrgb\+\+\+ {
+  margin-bottom: 35px;
+}
+.mrgt\+\+\+ {
+  margin-top: 35px;
+}
 /**
  * Responsiveness
  */

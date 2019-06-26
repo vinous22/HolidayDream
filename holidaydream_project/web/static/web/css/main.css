@@ -92,6 +92,12 @@
 /**
  * Spacings
  */
+.mrgb\+\+\+ {
+  margin-bottom: 35px; }
+
+.mrgt\+\+\+ {
+  margin-top: 35px; }
+
 /**
  * Responsiveness
  */
@@ -3298,10 +3304,14 @@ h6,
   border-radius: 25px;
   border: 2px solid #ff4e50;
   padding: 8px 20px;
-  color: #ff4e50; }
+  color: #ff4e50;
+  width: 100%; }
   .btn--special:hover {
     background-color: #ff4e50;
     color: white; }
+  @media only screen and (min-width: 48.0625em) {
+    .btn--special {
+      width: 180px; } }
 
 .btn--small {
   padding: 4px 13px; }
@@ -3549,6 +3559,25 @@ a {
       max-width: 940px; } }
 
 /**
+ * Grid
+ */
+.grid {
+  margin-left: -20px; }
+  .grid--multiline .grid__item {
+    padding-top: 20px; }
+
+.grid__item {
+  padding-left: 20px; }
+
+@media (max-width: 48em) {
+  .grid {
+    margin-left: -10px; }
+    .grid--multiline .grid__item {
+      padding-top: 10px; }
+  .grid__item {
+    padding-left: 10px; } }
+
+/**
  * Featured 01
  */
 .activities__item {
@@ -3556,11 +3585,20 @@ a {
   .activities__item .activities__title {
     color: white;
     position: absolute;
-    top: 35%;
-    left: 21%; }
+    top: 15%;
+    left: 34%; }
+    @media only screen and (min-width: 48.0625em) {
+      .activities__item .activities__title {
+        top: 35%;
+        left: 21%; } }
+
+@media only screen and (min-width: 48.0625em) {
+  .activities__item--05 .activities__title,
+  .activities__item--06 .activities__title {
+    left: 31%; } }
 
 .activities--image01 {
-  background-image: url("../images/activity01-sport.svg");
+  background-image: url("../images/activity01-sport.jpg");
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
@@ -3568,26 +3606,73 @@ a {
   border-radius: 5px; }
   @media only screen and (min-width: 48.0625em) {
     .activities--image01 {
-      background-image: url("../images/activity01-sport.svg");
-      height: 310px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; } }
-  @media only screen and (min-width: 64.0625em) {
-    .activities--image01 {
-      background-image: url("../images/activity01-sport.svg");
-      height: 310px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover; } }
+      height: 310px; } }
 
-.story__item--item02 {
-  padding-top: 10px;
-  padding-bottom: 10px; }
+.activities--image02 {
+  background-image: url("../images/activity02-health.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
   @media only screen and (min-width: 48.0625em) {
-    .story__item--item02 {
-      padding-top: 0;
-      padding-bottom: 0; } }
+    .activities--image02 {
+      height: 310px; } }
+
+.activities--image03 {
+  background-image: url("../images/activity03-extreme.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .activities--image03 {
+      height: 310px; } }
+
+.activities--image04 {
+  background-image: url("../images/activity04-games.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .activities--image04 {
+      height: 310px; } }
+
+.activities--image05 {
+  background-image: url("../images/activity05-culture.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .activities--image05 {
+      height: 310px; } }
+
+.activities--image06 {
+  background-image: url("../images/activity06-relax.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .activities--image06 {
+      height: 310px; } }
+
+.activities--image07 {
+  background-image: url("../images/activity07-partnership.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .activities--image07 {
+      height: 310px; } }
 
 /**
  * Hom

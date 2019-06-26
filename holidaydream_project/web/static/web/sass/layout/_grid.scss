@@ -1,4 +1,43 @@
 /**
+ * Grid
+ */
+
+.grid,
+%grid {
+  margin-left: -$grid-gutter;
+
+  &--multiline {
+    .grid__item,
+    %grid__item {
+      padding-top: $grid-gutter;
+    }
+  }
+}
+
+.grid__item,
+%grid__item {
+  padding-left: $grid-gutter;
+}
+
+@media (max-width: $screen-sm-max) {
+  .grid,
+  %grid {
+    margin-left: -$grid-gutter-small;
+
+    &--multiline {
+      .grid__item,
+      %grid__item {
+        padding-top: $grid-gutter-small;
+      }
+    }
+  }
+
+  .grid__item,
+  %grid__item {
+    #{$padding-left}: $grid-gutter-small;
+  }
+}
+/**
  * Featured 01
  */
 
@@ -7,13 +46,25 @@
   .activities__title {
     color: $body-light;
     position: absolute;
-    top: 35%;
-    left: 21%;
+    top: 15%;
+    left: 34%;
+    @media only screen and (min-width: $screen-md-min) {
+      top: 35%;
+      left: 21%;
+    }
+  }
+}
+.activities__item--05,
+.activities__item--06 {
+  .activities__title {
+    @media only screen and (min-width: $screen-md-min) {
+      left: 31%;
+    }
   }
 }
 
 .activities--image01 {
-  background-image: url("../images/activity01-sport.svg");
+  background-image: url("../images/activity01-sport.jpg");
   height: 120px;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,58 +72,84 @@
   border-radius: 5px;
   // tablet
   @media only screen and (min-width: $screen-md-min) {
-    background-image: url("../images/activity01-sport.svg");
     height: 310px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  // desktop
-  @media only screen and (min-width: $screen-lg-min) {
-    background-image: url("../images/activity01-sport.svg");
-    height: 310px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
-.story__item--item02 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+.activities--image02 {
+  background-image: url("../images/activity02-health.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  // tablet
   @media only screen and (min-width: $screen-md-min) {
-    padding-top: 0;
-    padding-bottom: 0;
+    height: 310px;
   }
 }
 
-// .story--image02 {
-//   background-image: url("../images/step02-tablet.svg");
-//   height: 240px;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   border-radius: 5px;
-//   @media only screen and (min-width: $screen-md-min) {
-//     background-image: url("../images/step02-tablet.svg");
-//     height: 400px;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//   }
-// }
+.activities--image03 {
+  background-image: url("../images/activity03-extreme.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  // tablet
+  @media only screen and (min-width: $screen-md-min) {
+    height: 310px;
+  }
+}
 
-// .story--image03 {
-//   background-image: url("../images/step03-tablet.svg");
-//   height: 240px;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   border-radius: 5px;
-//   @media only screen and (min-width: $screen-md-min) {
-//     background-image: url("../images/step03-tablet.svg");
-//     height: 400px;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//   }
-// }
+.activities--image04 {
+  background-image: url("../images/activity04-games.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  // tablet
+  @media only screen and (min-width: $screen-md-min) {
+    height: 310px;
+  }
+}
+
+.activities--image05 {
+  background-image: url("../images/activity05-culture.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  // tablet
+  @media only screen and (min-width: $screen-md-min) {
+    height: 310px;
+  }
+}
+
+.activities--image06 {
+  background-image: url("../images/activity06-relax.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  // tablet
+  @media only screen and (min-width: $screen-md-min) {
+    height: 310px;
+  }
+}
+
+.activities--image07 {
+  background-image: url("../images/activity07-partnership.jpg");
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  // tablet
+  @media only screen and (min-width: $screen-md-min) {
+    height: 310px;
+  }
+}

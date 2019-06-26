@@ -23,9 +23,14 @@
   border: 2px solid $glowing-red;
   padding: 8px 20px;
   color: $glowing-red;
+  width: 100%;
   &:hover {
     background-color: $glowing-red;
     color: $body-light;
+  }
+
+  @media only screen and (min-width: $screen-md-min) {
+    width: 180px;
   }
 }
 
