@@ -3321,10 +3321,34 @@ h6,
  */
 .story__item {
   position: relative; }
-  .story__item .textblock {
-    position: absolute;
-    bottom: 28px;
-    padding: 0 20px; }
+
+.page-paragraph,
+.page-title,
+.page-button {
+  position: absolute;
+  left: 45px; }
+
+.page-paragraph {
+  bottom: 30px; }
+
+.page-title {
+  bottom: 88px; }
+
+.page-button {
+  bottom: 161px; }
+
+.story--image {
+  height: 240px;
+  width: 100%;
+  border-radius: 5px; }
+  @media only screen and (min-width: 48.0625em) {
+    .story--image {
+      height: 400px;
+      width: 263px; } }
+  @media only screen and (min-width: 64.0625em) {
+    .story--image {
+      height: 400px;
+      width: 300px; } }
 
 .story--image01 {
   background-image: url("../images/step01-tablet.jpg");
@@ -3735,6 +3759,3 @@ a {
  */
 .main h1 {
   color: #444444; }
-
-.page-title {
-  color: #666666; }

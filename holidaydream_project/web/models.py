@@ -35,16 +35,14 @@ class BlogIndexPage(Page):
 
 class BlogPage(Page):
     date = models.DateField("Post date")
-    intro = RichTextField(blank=True)
     body = StreamField([
-        ('heading', blocks.CharBlock(classname="full title")),
-        ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock(blank=True)),
-        ('quuote', BlockQuoteBlock(blank=True)),
+        ('button', blocks.CharBlock(blank=True)),
+        ('paragraph', blocks.CharBlock(blank=True)),
+        ('quote', BlockQuoteBlock(blank=True)),
     ])
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
-        FieldPanel('intro'),
         StreamFieldPanel('body'),
     ]

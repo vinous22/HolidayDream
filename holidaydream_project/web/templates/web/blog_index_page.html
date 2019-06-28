@@ -5,17 +5,55 @@
 {% block body_class %}template-blogindexpage{% endblock %}
 
 {% block content %}
+<h3 class="text-center">How Dreamshare</h3>
 <div class="content-wrapper">
-    <h1 class="page-title">{{ page.title }}</h1>
+    <section>
+        <!-- start of grid -->
+        <div class="story grid grid--center ">
 
-    <div class="intro">{{ page.intro|richtext }}</div>
 
-    {% for post in blogpages %}
-    <h2><a class="page-title" href="{% pageurl post %}">{{ post.title }}</a></h2>
+            {% for post in blogpages %}
 
-    {{ post.specific.intro|richtext }}
-    {{ post.specific.date }}
-    {{ post.specific.body }}
-    {% endfor %}
+
+
+
+            <article class=" story__item w-1/1 md-w-1/3 lg-w-1/3 grid__item">
+
+                {% for block in post.specific.body %}
+
+                <!-- image -->
+                {% if block.block_type == 'image' %}
+                <div class=" story__image">{{ block }}
+                </div>
+                {% endif %}
+
+                <!-- button -->
+                {% if block.block_type == 'button' %}
+                <button
+                    class="page-button btn btn--primary text--small btn--small text-uppercase">{{ block.value }}</button>
+                <!-- title -->
+                <h2 class="page-title">{{ post.specific.title }}</h2>
+                <!-- paragraph -->
+                {% elif block.block_type == 'paragraph' %}
+                <p class="page-paragraph text--default">{{ block.value }}</p>
+
+                {% else %}
+                {% endif %}
+                {% endfor %}
+
+            </article>
+            <!-- ------------------------------------------------------------------ -->
+
+
+
+            {% endfor %}
+
+        </div>
+        <!-- end of grid -->
+
+
+
+
+    </section>
 </div>
 {% endblock %}
