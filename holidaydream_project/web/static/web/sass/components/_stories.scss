@@ -2,112 +2,48 @@
  * Featured 01
  */
 
-// .story__item {
-//   position: relative;
-//   .textblock {
-//     position: absolute;
-//     bottom: 28px;
-//     padding: 0 20px;
-//   }
-// }
-
-// .textblock {
-//   position: relative;
-//   button {
-//     position: absolute;
-//     bottom: 0;
-//   }
-//   .page-paragraph {
-//     position: absolute;
-//     bottom: 0;
-//   }
-// }
 .story__item {
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @media only screen and (min-width: $screen-md-min) {
+    padding: 0px;
+  }
 }
 
 .page-paragraph,
 .page-title,
 .page-button {
   position: absolute;
-  left: 45px;
+  left: 35px;
 }
 .page-paragraph {
-  bottom: 30px;
+  bottom: 25px;
+  @media only screen and (min-width: $screen-md-min) {
+    bottom: 21px;
+  }
 }
 .page-title {
-  bottom: 88px;
+  bottom: 70px;
+  @media only screen and (min-width: $screen-lg-min) {
+    bottom: 82px;
+  }
 }
 .page-button {
-  bottom: 161px;
+  bottom: 150px;
 }
 
-.story--image {
-  height: 240px;
-  width: 100%;
+.story__image {
+  img {
+    height: 240px;
+    width: 100%;
 
-  border-radius: 5px;
-  @media only screen and (min-width: $screen-md-min) {
-    height: 400px;
-    width: 263px;
-  }
-  @media only screen and (min-width: $screen-lg-min) {
-    height: 400px;
-    width: 300px;
-  }
-}
-.story--image01 {
-  background-image: url("../images/step01-tablet.jpg");
-  height: 240px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  @media only screen and (min-width: $screen-md-min) {
-    background-image: url("../images/step01-tablet.jpg");
-    height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-.story__item--item02 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  @media only screen and (min-width: $screen-md-min) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-.story--image02 {
-  background-image: url("../images/step02-tablet.jpg");
-  height: 240px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  @media only screen and (min-width: $screen-md-min) {
-    background-image: url("../images/step02-tablet.jpg");
-    height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
-.story--image03 {
-  background-image: url("../images/step03-tablet.jpg");
-  height: 240px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  @media only screen and (min-width: $screen-md-min) {
-    background-image: url("../images/step03-tablet.jpg");
-    height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    border-radius: 5px;
+    @media only screen and (min-width: $screen-md-min) {
+      height: 400px;
+    }
+    @media only screen and (min-width: $screen-lg-min) {
+      height: 400px;
+    }
   }
 }
