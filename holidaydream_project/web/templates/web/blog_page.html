@@ -6,13 +6,11 @@
 
 {% block content %}
 <main class="content-wrapper">
-    <h1 class="page-title">{{ page.title }}</h1>
-    <p class="meta">{{ page.date }}</p>
-
-    <div class="intro">{{ page.intro|richtext }}</div>
-
-    {{ page.body|richtext }}
-
-    <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
+    <article>
+        {% include_block page.body %}
+        {% for block in page.body %}
+        <section>{% include_block block %}</section>
+        {% endfor %}
+    </article>
 </main>
 {% endblock %}

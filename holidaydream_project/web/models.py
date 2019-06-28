@@ -1,11 +1,14 @@
 from django.db import models
-
-# Create your models here.
 from django.db import models
-
+from wagtail.core.fields import StreamField
+from wagtail.core import blocks
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, StreamFieldPanel
+from wagtail.images.blocks import ImageChooserBlock
+from wagtail.core.blocks import BlockQuoteBlock
+
+# Create your models here.
 
 
 class HomePage(Page):
@@ -33,10 +36,15 @@ class BlogIndexPage(Page):
 class BlogPage(Page):
     date = models.DateField("Post date")
     intro = RichTextField(blank=True)
-    body = RichTextField(blank=True)
+    body = StreamField([
+        ('heading', blocks.CharBlock(classname="full title")),
+        ('paragraph', blocks.RichTextBlock()),
+        ('image', ImageChooserBlock(blank=True)),
+        ('quuote', BlockQuoteBlock(blank=True)),
+    ])
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
         FieldPanel('intro'),
-        FieldPanel('body', classname="full"),
+        StreamFieldPanel('body'),
     ]
