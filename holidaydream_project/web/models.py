@@ -19,7 +19,7 @@ class HomePage(Page):
     ]
 
 
-class BlogIndexPage(Page):
+class FeaturedIndexPage(Page):
     intro = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
@@ -28,21 +28,18 @@ class BlogIndexPage(Page):
 
     def get_context(self, request):
         context = super().get_context(request)
-        blogpages = self.get_children().live().order_by('first_published_at')
-        context['blogpages'] = blogpages
+        featuredCards = self.get_children().live().order_by('first_published_at')
+        context['featuredCards'] = featuredCards
         return context
 
 
-class BlogPage(Page):
-    date = models.DateField("Post date")
+class FeaturedPage(Page):
     body = StreamField([
         ('image', ImageChooserBlock(blank=True)),
         ('button', blocks.CharBlock(blank=True)),
         ('paragraph', blocks.CharBlock(blank=True)),
-        ('quote', BlockQuoteBlock(blank=True)),
     ])
 
     content_panels = Page.content_panels + [
-        FieldPanel('date'),
         StreamFieldPanel('body'),
     ]
