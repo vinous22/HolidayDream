@@ -53,23 +53,26 @@
                 {% for page in teams %}
                 {% for post in page.get_children %}
 
-                <article class="team__item w-1/1 md-w-1/2 lg-w-1/4 grid__item text-center align-center">
-                    <!-- title -->
-                    <a class="h6 page-title" href=" {% pageurl post %}">{{ post.specific.title }}</a>
+                <div class="team__item w-1/1 md-w-1/2 lg-w-1/4 grid__item text-center">
+
                     {% for block in post.specific.body %}
 
                     <!-- image -->
                     {% if block.block_type == 'image' %}
                     <div class="team__image">{{ block }}
                     </div>
-                    {% endif %}
+                    {% elif block.block_type == 'name' %}
+                    <!-- title -->
+                    <a class="team__title h6 mrgb++" href=" {% pageurl post %}">{{ post.specific.title }}</a>
                     <!-- paragraph -->
-                    {% if block.block_type == 'paragraph' %}
-                    <p class="page-paragraph text--default">{{ block.value }}</p>
+                    {% elif block.block_type == 'paragraph' %}
+                    <p class="team__paragraph text--default">{{ block.value }}</p>
+                    {% else %}
+                    <p class="team__button btn btn--special h6">{{ block.value }}</p>
                     {% endif %}
                     {% endfor %}
 
-                </article>
+                </div>
                 <!-- end of article------------------------------------------------------------------ -->
                 {% endfor %}
                 {% endfor %}

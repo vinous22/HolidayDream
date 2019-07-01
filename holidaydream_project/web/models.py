@@ -68,9 +68,12 @@ class TeamIndexPage(Page):
 
 
 class TeamMemberPage(Page):
+
     body = StreamField([
         ('image', ImageChooserBlock(blank=True)),
+        ('name', blocks.CharBlock(blank=True)),
         ('paragraph', blocks.CharBlock(blank=True)),
+        ('button', blocks.CharBlock(blank=True)),
     ])
 
     content_panels = Page.content_panels + [
