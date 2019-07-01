@@ -76,8 +76,6 @@
 @import "base/_base";
 @import "base/_typo";
 @import "components/_buttons";
-@import "components/_featured";
-@import "components/_team";
 
 @import "layout/_footer";
 @import "layout/_forms";
@@ -87,3 +85,6 @@
 @import "layout/_grid";
 
 @import "pages/_home";
+@import "pages/_featured";
+@import "pages/_team";
+@import "pages/_activity";

@@ -22,6 +22,7 @@ class HomePage(Page):
         components = self.get_children()
         context['featured'] = components.type(FeaturedIndexPage)
         context['teams'] = components.type(TeamIndexPage)
+        context['activities'] = components.type(ActivityIndexPage)
         return context
 
 # featured area
@@ -32,12 +33,6 @@ class FeaturedIndexPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname='full')
     ]
-
-    def get_context(self, request):
-        context = super().get_context(request)
-        featuredCards = self.get_children().live().order_by('first_published_at')
-        context['featuredCards'] = featuredCards
-        return context
 
 
 class FeaturedPage(Page):
@@ -60,12 +55,6 @@ class TeamIndexPage(Page):
         FieldPanel('intro', classname='full')
     ]
 
-    def get_context(self, request):
-        context = super().get_context(request)
-        teamCards = self.get_children().live().order_by('first_published_at')
-        context['teamCards'] = teamCards
-        return context
-
 
 class TeamMemberPage(Page):
 
@@ -74,6 +63,24 @@ class TeamMemberPage(Page):
         ('name', blocks.CharBlock(blank=True)),
         ('paragraph', blocks.CharBlock(blank=True)),
         ('button', blocks.CharBlock(blank=True)),
+    ])
+
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('body'),
+    ]
+
+
+class ActivityIndexPage(Page):
+    intro = RichTextField(blank=True)
+    content_panels = Page.content_panels + [
+        FieldPanel('intro', classname='full')
+    ]
+
+
+class ActivityPage(Page):
+    body = StreamField([
+        ('image', ImageChooserBlock(blank=True)),
+        ('name', blocks.CharBlock(blank=True)),
     ])
 
     content_panels = Page.content_panels + [
