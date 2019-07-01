@@ -1,0 +1,38 @@
+{% load wagtailcore_tags static %}
+
+{% block body_class %}template-teamindexpage{% endblock %}
+
+{% block content %}
+
+
+<section class="team">
+    <h3 class="text-center">Meet a partner for your best holiday</h3>
+    <div class="content-wrapper">
+        <!-- start of grid -->
+        <div class="team grid grid--center ">
+            {% for post in teamCards %}
+
+            <article class="team__item w-1/1 md-w-1/2 lg-w-1/4 grid__item">
+
+                {% for block in post.specific.body %}
+                <!-- image -->
+                {% if block.block_type == 'image' %}
+                <div class="team__image">{{ block }}
+                </div>
+                {% endif %}
+                <!-- paragraph -->
+                {% if block.block_type == 'paragraph' %}
+                <p class="page-paragraph text--default">{{ block.value }}</p>
+                {% endif %}
+                {% endfor %}
+                <!-- title -->
+                <h6><a class="h6" href="{% pageurl post %}">{{ post.specific.title }}</a></h6>
+            </article>
+            <!-- end of article------------------------------------------------------------------ -->
+            {% endfor %}
+        </div>
+        <!-- end of grid -->
+    </div>
+</section>
+
+{% endblock %}

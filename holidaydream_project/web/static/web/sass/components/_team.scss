@@ -7,49 +7,18 @@
     color: $text-dark;
   }
 }
-.featured02 {
-  margin-top: 95px;
-}
+
 .team__item {
   position: relative;
-}
-
-.team__item {
   width: 220px;
-  height: 205px;
+  height: 224px;
+  .team__image img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
-.team--image01 {
-  background-image: url("../images/member01.jpg");
-  height: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.team--image02 {
-  background-image: url("../images/member02.jpg");
-  height: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.team--image03 {
-  background-image: url("../images/member03.jpg");
-  height: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.team--image04 {
-  background-image: url("../images/member04.jpg");
-  height: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 .team__call2action {
   margin-top: 36px;
 }

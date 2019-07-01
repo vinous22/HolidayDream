@@ -11,25 +11,25 @@
   }
 }
 
-.page-paragraph,
-.page-title,
-.page-button {
+.story__paragraph,
+.story__title,
+.story__button {
   position: absolute;
   left: 35px;
 }
-.page-paragraph {
+.story__paragraph {
   bottom: 25px;
   @media only screen and (min-width: $screen-md-min) {
     bottom: 21px;
   }
 }
-.page-title {
+.story__title {
   bottom: 70px;
   @media only screen and (min-width: $screen-lg-min) {
     bottom: 82px;
   }
 }
-.page-button {
+.story__button {
   bottom: 150px;
 }
 
