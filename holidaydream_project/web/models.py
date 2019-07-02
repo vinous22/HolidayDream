@@ -1,13 +1,11 @@
 from django.db import models
-from django.db import models
 from wagtail.core.fields import StreamField
 from wagtail.core import blocks
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, StreamFieldPanel
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, StreamFieldPanel, MultiFieldPanel, FieldRowPanel
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.core.blocks import BlockQuoteBlock
-
 # Create your models here.
 
 
@@ -23,6 +21,7 @@ class HomePage(Page):
         context['featured'] = components.type(FeaturedIndexPage)
         context['teams'] = components.type(TeamIndexPage)
         context['activities'] = components.type(ActivityIndexPage)
+
         return context
 
 # featured area

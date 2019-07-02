@@ -24,8 +24,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    # path('', include('web.urls')),
+    path('admin-django/', admin.site.urls),
+    # path('/newsletter', include('web.urls')),
     re_path(r'^admin/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
