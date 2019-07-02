@@ -111,7 +111,15 @@
         </div>
     </section>
 
-    {% include "web/subscribe.html" %}
+    <section class="newsletter">
+
+        {% block newsletter_form %}
+        {% include "web/newsletter_form_page.html" %}
+        {% endblock newsletter_form %}
+
+
+
+    </section>
 
 </main>
 {% endblock %}

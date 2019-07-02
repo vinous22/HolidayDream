@@ -6,6 +6,18 @@ from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, StreamFieldPanel, MultiFieldPanel, FieldRowPanel
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.core.blocks import BlockQuoteBlock
+from django import template
+
+
+from modelcluster.fields import ParentalKey
+from wagtail.admin.edit_handlers import (
+    FieldPanel, FieldRowPanel,
+    InlinePanel, MultiFieldPanel, PageChooserPanel
+)
+from wagtail.core.fields import RichTextField
+from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
+from wagtail.contrib.settings.models import BaseSetting, register_setting
+
 # Create your models here.
 
 
@@ -21,8 +33,19 @@ class HomePage(Page):
         context['featured'] = components.type(FeaturedIndexPage)
         context['teams'] = components.type(TeamIndexPage)
         context['activities'] = components.type(ActivityIndexPage)
-
         return context
+
+
+@register_setting
+class MyCustomSettings(BaseSetting):
+    newsletter_form_page = models.ForeignKey(
+        'wagtailcore.Page', null=True, on_delete=models.SET_NULL)
+    content_panels = [
+        # note the page type declared within the pagechooserpanel
+        PageChooserPanel('newsletter_form_page', [
+                         'web.NewsletterFormPage']),
+    ]
+
 
 # featured area
 
@@ -84,4 +107,27 @@ class ActivityPage(Page):
 
     content_panels = Page.content_panels + [
         StreamFieldPanel('body'),
+    ]
+
+
+class FormField(AbstractFormField):
+    newsletter_form_page = ParentalKey('NewsletterFormPage', on_delete=models.CASCADE,
+                                       related_name='form_fields')
+
+
+class NewsletterFormPage(AbstractEmailForm):
+    intro = RichTextField(blank=True)
+    thank_you_text = RichTextField(blank=True)
+
+    content_panels = AbstractEmailForm.content_panels + [
+        FieldPanel('intro', classname="full"),
+        InlinePanel('form_fields', label="Form fields"),
+        FieldPanel('thank_you_text', classname="full"),
+        MultiFieldPanel([
+            FieldRowPanel([
+                FieldPanel('from_address', classname="col6"),
+                FieldPanel('to_address', classname="col6"),
+            ]),
+            FieldPanel('subject'),
+        ], "Email"),
     ]

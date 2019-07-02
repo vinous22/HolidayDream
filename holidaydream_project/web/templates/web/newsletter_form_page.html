@@ -1,0 +1,10 @@
+{% load wagtailcore_tags newsletter_form %}
+
+{% get_newsletter_form as newsletter_form %}
+
+<form action="{% pageurl newsletter_form.page %}" method="POST" role="form">
+    <h3>{{ newsletter_form.page.title }}</h3>
+    {% csrf_token %}
+    {{ newsletter_form.form.as_p }}
+    <input type="submit">
+</form>
