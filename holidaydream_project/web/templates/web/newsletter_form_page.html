@@ -4,7 +4,7 @@
 
 <div class="content-wrapper">
     <form class="newsletter__form text-center" action="{% pageurl newsletter_form.page %}" method="POST" role="form">
-        <h3 class="text-center mrgb++">{{ newsletter_form.page.title }}</h3>
+        <h3 class="text-center">{{ newsletter_form.page.title }}</h3>
         <p class="text--lead">{{ newsletter_form.page.intro|richtext}}</p>
         {% csrf_token %}
         {{ newsletter_form.form }}
