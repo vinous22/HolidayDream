@@ -33,6 +33,7 @@ class HomePage(Page):
         context['featured'] = components.type(FeaturedIndexPage)
         context['teams'] = components.type(TeamIndexPage)
         context['activities'] = components.type(ActivityIndexPage)
+        context['staticPage'] = components.type(StaticPage)
         return context
 
 
@@ -144,6 +145,20 @@ class ActivityPage(Page):
     body = StreamField([
         ('image', ImageChooserBlock(blank=True)),
         ('name', blocks.CharBlock(blank=True)),
+    ])
+
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('body'),
+    ]
+
+
+class StaticPage(Page):
+    body = StreamField([
+        ('title', blocks.CharBlock(blank=True)),
+        ('lead', blocks.CharBlock(blank=True)),
+        ('paragraph', blocks.RichTextBlock()),
+        ('image', ImageChooserBlock(blank=True)),
+        ('quote', BlockQuoteBlock(blank=True)),
     ])
 
     content_panels = Page.content_panels + [
