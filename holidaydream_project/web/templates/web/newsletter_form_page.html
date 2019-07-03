@@ -2,9 +2,12 @@
 
 {% get_newsletter_form as newsletter_form %}
 
-<form action="{% pageurl newsletter_form.page %}" method="POST" role="form">
-    <h3>{{ newsletter_form.page.title }}</h3>
-    {% csrf_token %}
-    {{ newsletter_form.form.as_p }}
-    <input type="submit">
-</form>
+<div class="content-wrapper">
+    <form class="newsletter__form text-center" action="{% pageurl newsletter_form.page %}" method="POST" role="form">
+        <h3 class="text-center mrgb++">{{ newsletter_form.page.title }}</h3>
+        <p class="text--lead">{{ newsletter_form.page.intro|richtext}}</p>
+        {% csrf_token %}
+        {{ newsletter_form.form }}
+        <input class="mrgt++" type="submit" value="Sign up">
+    </form>
+</div>

@@ -1,21 +1,11 @@
 /**
  * Forms
  */
-.newsletter {
-  margin: 40px 0;
-  @media only screen and (min-width: $screen-md-min) {
-    margin: 100px 0;
-  }
-}
-.newsletter--title {
-  margin-top: 0;
-  margin-bottom: 10px;
 
-  @media only screen and (min-width: $screen-md-min) {
-    margin-bottom: 45px;
-  }
-}
 form {
+  label {
+    display: none;
+  }
   .text--lead {
     color: $text-dark;
     margin-bottom: 18px;
@@ -42,6 +32,27 @@ form {
       width: 300px;
     }
   }
+  input[type="email"] {
+    // class="field field--inline mrgr+"
+    margin-right: 16px;
+    margin-top: 16px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #adb7c3;
+    line-height: 1.25;
+    padding: 8.65248px 14px;
+  }
+
+  input[type="submit"] {
+    background-color: $glowing-red;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: $font-size-14;
+    color: $body-light;
+    font-weight: $weight-bold;
+    font-family: $font-family-headers;
+  }
+
   ::placeholder {
     font-size: $font-size-14;
     font-weight: $weight-light;
