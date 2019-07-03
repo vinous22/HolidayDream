@@ -2,48 +2,42 @@
  * Featured
  */
 
-.story__item {
+.featured__item {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  // @media only screen and (min-width: $screen-md-min) {
-  //   padding: 0px;
-  // }
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 240px;
+  @media only screen and (min-width: $screen-md-min) {
+    height: 400px;
+  }
 }
 
-.story__paragraph,
-.story__title,
-.story__button {
+.featured__paragraph,
+.featured__title,
+.featured__button {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 15px 20px;
+  @media only screen and (min-width: $screen-md-min) {
+    margin: 0 0 20px 20px;
+  }
+}
+
+.featured__image {
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   position: absolute;
-  left: 25px;
-  @media only screen and (min-width: $screen-lg-min) {
-    left: 35px;
-  }
-}
-.story__paragraph {
-  bottom: 40px;
-  @media only screen and (min-width: $screen-lg-min) {
-    bottom: 30px;
-  }
-}
-.story__title {
-  bottom: 80px;
-}
-.story__button {
-  bottom: 160px;
-}
+  overflow: hidden;
 
-.story__image {
   img {
-    height: 240px;
+    object-fit: cover;
     width: 100%;
-
-    border-radius: 5px;
-    @media only screen and (min-width: $screen-md-min) {
-      height: 400px;
-    }
-    @media only screen and (min-width: $screen-lg-min) {
-      height: 400px;
-    }
+    display: block;
   }
 }
