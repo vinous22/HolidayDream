@@ -17,7 +17,7 @@
   position: absolute;
   left: 25px;
   @media only screen and (min-width: $screen-lg-min) {
-    left: 30px;
+    left: 35px;
   }
 }
 .story__paragraph {
@@ -27,16 +27,10 @@
   }
 }
 .story__title {
-  bottom: 70px;
-  @media only screen and (min-width: $screen-lg-min) {
-    bottom: 82px;
-  }
+  bottom: 80px;
 }
 .story__button {
-  bottom: 150px;
-  @media only screen and (min-width: $screen-lg-min) {
-    bottom: 150px;
-  }
+  bottom: 160px;
 }
 
 .story__image {

@@ -3340,6 +3340,14 @@ footer {
 
 .footer__col4 {
   text-align: center; }
+  .footer__col4 img {
+    margin: 0 auto; }
+    @media only screen and (min-width: 48.0625em) {
+      .footer__col4 img {
+        float: right; } }
+  .footer__col4 .text--small {
+    color: #cccccc;
+    letter-spacing: 1px; }
   @media only screen and (min-width: 48.0625em) {
     .footer__col4 {
       text-align: right; } }
@@ -3569,7 +3577,7 @@ section {
     .story__paragraph,
     .story__title,
     .story__button {
-      left: 30px; } }
+      left: 35px; } }
 
 .story__paragraph {
   bottom: 40px; }
@@ -3578,16 +3586,10 @@ section {
       bottom: 30px; } }
 
 .story__title {
-  bottom: 70px; }
-  @media only screen and (min-width: 64.0625em) {
-    .story__title {
-      bottom: 82px; } }
+  bottom: 80px; }
 
 .story__button {
-  bottom: 150px; }
-  @media only screen and (min-width: 64.0625em) {
-    .story__button {
-      bottom: 150px; } }
+  bottom: 160px; }
 
 .story__image img {
   height: 240px;

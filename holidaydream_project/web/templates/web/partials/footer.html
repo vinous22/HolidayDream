@@ -5,20 +5,20 @@
 
             <!-- Footer col1-->
             <div class="w-1/1 md-w-1/4 lg-w-1/4 grid__item footer__col1">
-                <h5 class="text-uppercase">dreamshare</h5>
+                <h5 class="text-uppercase">{{ settings.web.Footer.logo_left }}</h5>
             </div>
 
             <!-- End of footer col1 -->
             <!-- Footer col2 -->
             <div class="w-1/1 md-w-1/4 lg-w-1/4 grid__item footer__col2">
-                <h6 class="footer--title pdgb++">Company</h6>
+                <h6 class="footer--title pdgb++">{{ settings.web.Footer.title_left }}</h6>
                 <ul class="list list--01 justify-content--center">
-                    <li class="list__item pdgl++ pdgb++"><a href="#">About</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Contact</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Press</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Blog</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Terms and Privacy</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Help </a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item1_left }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item2_left }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item3_left }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item4_left }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item5_left }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item6_left }} </a></li>
 
                 </ul>
             </div>
@@ -27,14 +27,14 @@
 
             <!-- Footer col3 -->
             <div class="w-1/1 md-w-1/4 lg-w-1/4 grid__item footer__col3 pdgb++">
-                <h6 class="footer--title pdgb++">Partner</h6>
+                <h6 class="footer--title pdgb++">{{ settings.web.Footer.title_right }}</h6>
                 <ul class="list list--02 justify-content--center">
-                    <li class="list__item pdgl++ pdgb++"><a href="#">About</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Contact</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Press</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Blog</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Terms and Privacy</a></li>
-                    <li class="list__item pdgl++ pdgb++"><a href="#">Help </a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item1_right }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item2_right }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item3_right }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item4_right }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item5_right }}</a></li>
+                    <li class="list__item pdgl++ pdgb++"><a href="#">{{ settings.web.Footer.list_item6_right }}</a></li>
                 </ul>
             </div>
             <!-- End of footer col3 -->
@@ -42,9 +42,9 @@
             <!-- Footer col4 -->
             <div class="w-1/1 md-w-1/4 lg-w-1/4 grid__item footer__col4">
                 <p class="text--small text-uppercase pdgb+">designed by</p>
-                <div class="footer-logo"></div>
+                <div><img src="/media/{{ settings.web.Footer.logo_right }}" alt="areto-logo">
+                </div>
+                <!-- End of footer col4 -->
             </div>
-            <!-- End of footer col4 -->
         </div>
-    </div>
 </footer>

@@ -37,6 +37,47 @@ class HomePage(Page):
 
 
 @register_setting
+class Footer(BaseSetting):
+    title_left = models.CharField(max_length=250)
+    list_item1_left = models.CharField(max_length=250, blank=True, null=True)
+    list_item2_left = models.CharField(max_length=250, blank=True, null=True)
+    list_item3_left = models.CharField(max_length=250, blank=True, null=True)
+    list_item4_left = models.CharField(max_length=250, blank=True, null=True)
+    list_item5_left = models.CharField(max_length=250, blank=True, null=True)
+    list_item6_left = models.CharField(max_length=250, blank=True, null=True)
+    logo_left = models.CharField(max_length=250, blank=True, null=True)
+
+    title_right = models.CharField(max_length=250)
+    list_item1_right = models.CharField(max_length=250, blank=True, null=True)
+    list_item2_right = models.CharField(max_length=250, blank=True, null=True)
+    list_item3_right = models.CharField(max_length=250, blank=True, null=True)
+    list_item4_right = models.CharField(max_length=250, blank=True, null=True)
+    list_item5_right = models.CharField(max_length=250, blank=True, null=True)
+    list_item6_right = models.CharField(max_length=250, blank=True, null=True)
+    logo_right = models.ImageField(
+        upload_to='images/', default='images/areto.jpg')
+
+    content_panels = Page.content_panels + [
+        FieldPanel('title_left '),
+        FieldPanel('list_item1_left'),
+        FieldPanel('list_item2_left'),
+        FieldPanel('list_item3_left'),
+        FieldPanel('list_item4_left'),
+        FieldPanel('list_item5_left'),
+
+        FieldPanel('title_right'),
+        FieldPanel('list_item1_right'),
+        FieldPanel('list_item2_right'),
+        FieldPanel('list_item3_right'),
+        FieldPanel('list_item4_right'),
+        FieldPanel('list_item5_right'),
+    ]
+
+    class Meta:
+        verbose_name = 'footer settings'
+
+
+@register_setting
 class MyCustomSettings(BaseSetting):
     newsletter_form_page = models.ForeignKey(
         'wagtailcore.Page', null=True, on_delete=models.SET_NULL)

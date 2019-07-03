@@ -25,7 +25,16 @@ footer {
 }
 .footer__col4 {
   text-align: center;
-
+  img {
+    margin: 0 auto;
+    @media only screen and (min-width: $screen-md-min) {
+      float: right;
+    }
+  }
+  .text--small {
+    color: $text-lighter;
+    letter-spacing: 1px;
+  }
   @media only screen and (min-width: $screen-md-min) {
     text-align: right;
   }
