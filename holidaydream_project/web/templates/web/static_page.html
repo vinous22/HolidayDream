@@ -7,13 +7,9 @@
 <main class="main">
     <section class="staic">
         <div class="content-wrapper">
-            {% for page in staticPage %}
-            {% for block in page.body %}
-            {{ block}}
-            {% endfor %}
-            {% endfor %}
+            <h1>{{ page.title }}</h1>
+            {% include_block page.body %}
         </div>
     </section>
-
 </main>
 {% endblock %}
