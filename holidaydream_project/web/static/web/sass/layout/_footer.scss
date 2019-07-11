@@ -3,7 +3,6 @@
  */
 footer {
   width: 100%;
-  // position: relative;
   background-color: $body-light;
   border-top: 2px solid $glowing-red;
   padding: 20px 0;
@@ -45,7 +44,6 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  // position: relative;
   @media only screen and (min-width: $screen-md-min) {
     background-position: right;
   }
