@@ -1,11 +1,11 @@
 {% load static %}
 
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Holiday Dream</title>
+    <title>{{page.title}}</title>
     <meta name="description" content="A demo wagtail project to practice django, wagtail and frontend.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="{% static 'web/site.webmanifest' %}">
@@ -25,8 +25,6 @@
     {% endblock content%}
 
     {% include "web/partials/footer.html" %}
-
-
 
     <script src="{% static 'web/js/vendor/modernizr-3.7.1.min.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
