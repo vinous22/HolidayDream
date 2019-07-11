@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% load wagtailcore_tags static %}
+{% load wagtailcore_tags static%}
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
 <section class="thank-you">
     <div class="content-wrapper">
-        <p class="mrgb++ mrgt++">Thanks for subscription.</p>
-        <a class="h6 mrgb++" href="/">Back</a>
+        <h3>{{ page.thank_you_title }}</h3>
+        {{ page.thank_you_text|richtext}}
+        <!-- <p class="mrgb++ mrgt++">Thanks for subscription.</p>
+        <a class="h6 mrgb++" href="/">Back</a> -->
     </div>
 </section>
 {% endblock %}

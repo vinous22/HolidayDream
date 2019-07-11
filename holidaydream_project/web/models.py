@@ -79,7 +79,7 @@ class Footer(BaseSetting):
 
 
 @register_setting
-class MyCustomSettings(BaseSetting):
+class NewsletterCustomSettings(BaseSetting):
     newsletter_form_page = models.ForeignKey(
         'wagtailcore.Page', null=True, on_delete=models.SET_NULL)
     content_panels = [
@@ -173,11 +173,13 @@ class FormField(AbstractFormField):
 
 class NewsletterFormPage(AbstractEmailForm):
     intro = RichTextField(blank=True)
+    thank_you_title = models.CharField(max_length=250, blank=True, null=True)
     thank_you_text = RichTextField(blank=True)
 
     content_panels = AbstractEmailForm.content_panels + [
         FieldPanel('intro', classname="full"),
         InlinePanel('form_fields', label="Form fields"),
+        FieldPanel('thank_you_title'),
         FieldPanel('thank_you_text', classname="full"),
         MultiFieldPanel([
             FieldRowPanel([

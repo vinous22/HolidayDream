@@ -54,6 +54,9 @@
     order: 1;
     position: relative;
     top: 100px;
+    .h4 {
+      margin-top: 0;
+    }
   }
   //tablet from 768
   @media only screen and (min-width: $screen-md-min) {

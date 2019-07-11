@@ -7,16 +7,15 @@
 <main class="main">
 
     <section class="featured">
-        <h3 class="text-center">How Dreamshare</h3>
+
         <div class="content-wrapper">
             <!-- start of grid -->
+            {% for page in featured %}
+            <h3 class="text-center">{{ page.title }}</h3>
             <div class="featured grid grid--multiline grid--center ">
-                {% for page in featured %}
                 {% for post in page.get_children %}
-
                 <article class="sm-w-1/3 md-w-1/3 lg-w-1/3 grid__item">
                     <div class="featured__item">
-
                         {% for block in post.specific.body %}
                         <!-- image -->
                         {% if block.block_type == 'image' %}
@@ -40,7 +39,6 @@
                 <!-- end of article------------------------------------------------------------------ -->
                 {% endfor %}
                 {% endfor %}
-
             </div>
             <!-- end of grid -->
         </div>
@@ -49,17 +47,14 @@
 
 
     <section class="team">
-        <h3 class="text-center">Meet a partner for your best holiday</h3>
         <div class="content-wrapper">
             <!-- start of grid -->
+            {% for page in teams %}
+            <h3 class="text-center">{{ page.title }}</h3>
             <div class="team grid grid--center ">
-                {% for page in teams %}
                 {% for post in page.get_children %}
-
                 <div class="team__item w-1/1 md-w-1/2 lg-w-1/4 grid__item text-center">
-
                     {% for block in post.specific.body %}
-
                     <!-- image -->
                     {% if block.block_type == 'image' %}
                     <div class="team__image">{{ block }}
@@ -74,7 +69,6 @@
                     <p class="team__button btn btn--special h6">{{ block.value }}</p>
                     {% endif %}
                     {% endfor %}
-
                 </div>
                 <!-- end of article------------------------------------------------------------------ -->
                 {% endfor %}
@@ -87,11 +81,13 @@
 
 
     <section class="activities">
-        <h3 class="text-center">Discover holiday activity ideas</h3>
+        <!-- <h3 class="text-center">Discover holiday activity ideas</h3> -->
         <div class="content-wrapper">
             <!-- start of grid -->
+
+            {% for page in activities %}
+            <h3 class="text-center">{{ page.title }}</h3>
             <div class="activities grid grid--multiline grid--center">
-                {% for page in activities %}
                 {% for post in page.get_children %}
 
                 <div class="grid__item w-1/1 md-w-1/3">
@@ -118,11 +114,9 @@
     </section>
 
     <section class="newsletter">
-
         {% block newsletter_form %}
         {% include "web/newsletter_form_page.html" %}
         {% endblock newsletter_form %}
-
     </section>
 
 </main>

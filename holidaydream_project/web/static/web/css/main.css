@@ -3474,6 +3474,8 @@ form ::placeholder {
     order: 1;
     position: relative;
     top: 100px; }
+    .header__top .header__brand .h4 {
+      margin-top: 0; }
   @media only screen and (min-width: 48.0625em) {
     .header__top {
       flex-direction: row; }
@@ -3500,8 +3502,9 @@ form ::placeholder {
  */
 a {
   text-decoration: none;
-  color: white;
   display: block; }
+  a:hover {
+    color: #444444; }
 
 .footer a {
   color: #999999; }
@@ -3632,7 +3635,8 @@ section {
 .activities__title {
   color: white;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  text-align: center; }
 
 .activities__image {
   position: absolute;
