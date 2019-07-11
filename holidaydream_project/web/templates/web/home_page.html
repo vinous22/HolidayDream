@@ -19,7 +19,10 @@
                         {% for block in post.specific.body %}
                         <!-- image -->
                         {% if block.block_type == 'image' %}
-                        <picture class="featured__image">{{ block }}
+                        <picture class="featured__image">
+                            <a href=" {% pageurl post %}">
+                                {{ block }}
+                            </a>
                         </picture>
                         {% endif %}
                         <!-- button -->
@@ -57,7 +60,10 @@
                     {% for block in post.specific.body %}
                     <!-- image -->
                     {% if block.block_type == 'image' %}
-                    <div class="team__image">{{ block }}
+                    <div class="team__image">
+                        <a href=" {% pageurl post %}">
+                            {{ block }}
+                        </a>
                     </div>
                     {% elif block.block_type == 'name' %}
                     <!-- title -->
@@ -96,10 +102,16 @@
                         {% for block in post.specific.body %}
                         <!-- image -->
                         {% if block.block_type == 'image' %}
-                        <picture class="activities__image">{{ block }} </picture>
+                        <picture class="activities__image">
+                            <a href=" {% pageurl post %}">
+                                {{ block }}
+                            </a>
+                        </picture>
                         <!-- title -->
                         {% elif block.block_type == 'name' %}
-                        <a class="activities__title h3" href=" {% pageurl post %}">{{ post.specific.title }}</a>
+                        <a class="activities__title h3" href=" {% pageurl post %}">{{ post.specific.title }}
+
+                        </a>
                         {% endif %}
                         {% endfor %}
                     </div>
